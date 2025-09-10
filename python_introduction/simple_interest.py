@@ -1,7 +1,7 @@
 
-principal = P = 1000
-rate = R = 0.05
-time = T= 3
+principal = 1000
+rate = 0.05
+time = 3
 
-interest = I = str(P * R *T)
+interest = str(principal * rate * time)
 print('The simple interest is: ' + interest)
