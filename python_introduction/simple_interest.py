@@ -4,5 +4,5 @@ rate = 0.05
 time = 3
 
 interest = (principal * rate * time)
-str(interest)
+interest = str(interest)
 print('The simple interest is: ' + interest)
