@@ -8,7 +8,7 @@ def main():
     print("2. Collaborate with other developers")
     print("3. Go fishing")
 
-    task = input("Enter 1, 2, or 3: ")
+    task = input("Enter your task: ")
 
     # Match Case: pick task
     match priority:
@@ -23,14 +23,14 @@ def main():
             return
 
     # Ask about priority (just for display)
-    priority = input("Set priority (high/medium/low): ").strip().lower()
+    priority = input("Priority (high/medium/low): ").strip().lower()
 
     # Ask about time sensitivity (used in if loop)
-    time_bound = input("Is this task time-sensitive? (yes/no): ").strip().lower()
+    time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
 
     print(f"\nYour task for today: {task}")
     print(f"Priority: {priority.upper()}")
-    print(f"Time-Sensitive: {time_bound.upper()}\n")
+    print(f"Time-bound: {time_bound.upper()}\n")
 
     reminders = 0
     while reminders < 3:
