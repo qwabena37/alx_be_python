@@ -26,7 +26,7 @@ def main():
             return
 
     # Ask about priority (just for display)
-    priority = input("Priority (high/medium/low): ")
+    priority = input("Priority (high\medium\low): ")
 
     # Ask about time sensitivity (used in if loop)
     time_bound = input("Is it time-bound? (yes/no): ")
