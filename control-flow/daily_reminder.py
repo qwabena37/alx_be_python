@@ -11,7 +11,7 @@ def main():
     task = input("Enter your task: ")
 
     # Match Case: pick task
-    match task:
+    match priority:
         case "1":
             task = "Complete Weekly Milestone"
             priority = 'high'
