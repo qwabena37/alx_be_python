@@ -11,13 +11,16 @@ def main():
     task = input("Enter your task: ")
 
     # Match Case: pick task
-    match priority:
+    match task:
         case "1":
             task = "Complete Weekly Milestone"
+            priority = "high"
         case "2":
             task = "Collaborate with other developers"
+            priority = 'medium'
         case "3":
             task = "Go fishing"
+            priority = 'low'
         case _:
             print("Invalid priority. Exiting.")
             return
