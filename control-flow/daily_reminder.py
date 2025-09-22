@@ -30,17 +30,13 @@ def main():
             print("Invalid choice. Exiting.")
             return
 
-    print(f"\nYour task for today: {task} (Urgency: {priority.upper()})\n")
-
     # Loop to remind user based on urgency
     reminders = 0
     while reminders < 3:
-        if priority == "high":
-            print(f"⚠️ Reminder {reminders+1}: Finish {task} is a high priority task that requires immediate attention today!")
-        elif priority == "medium":
-            print(f"🔔 Reminder {reminders+1}: Try to {task} .")
+        if time_bound == "yes":
+            print(f"⚠️ Reminder {reminders+1}: Finish {task} it's a high priority task that requires immediate attention today!")
         else:
-            print(f"😊 Reminder {reminders+1}: Remember to {task} when you can.")
-
+            print(f"🔔 Reminder {reminders+1}: Try to {task} at your free time.")
+        
 if __name__ == "__main__":
     main()
