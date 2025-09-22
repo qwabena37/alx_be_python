@@ -26,10 +26,10 @@ def main():
             return
 
     # Ask about priority (just for display)
-    priority = input("Priority (high/medium/low): ").strip().lower()
+    priority = input("Priority (high/medium/low): ")
 
     # Ask about time sensitivity (used in if loop)
-    time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
+    time_bound = input("Is it time-bound? (yes/no): ")
 
     print(f"\nYour task for today: {task}")
     print(f"Priority: {priority.upper()}")
