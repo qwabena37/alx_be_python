@@ -2,9 +2,9 @@
 
 def main():
     # Prompt for a single task
-    task = input("Enter your task for today: ")
-    priority = input("Set the task's priority (high/medium/low): ").strip().lower()
-    time_bound = input("Is this task time-bound? (yes/no): ").strip().lower()
+    task = input("Enter your task: ")
+    priority = input("Priority (high/medium/low): ").strip().lower()
+    time_bound = input("Is it time-bound? (yes/no): ").strip().lower()
 
     print("\n=== Task Reminder ===")
 
