@@ -3,7 +3,7 @@
 def main():
     try:
         # Ask the user for a positive integer
-        size = int(input("EEnter the size of the pattern: "))
+        size = int(input("Enter the size of the pattern: "))
 
         if size <= 0:
             print("Please enter a positive integer greater than zero.")
