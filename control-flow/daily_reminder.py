@@ -24,7 +24,7 @@ def main():
         reminder += " — that requires immediate attention today!"
 
     # Provide customized reminder
-    print(reminder +':') 
+    print('Reminder: ' + reminder) 
 
 
 if __name__ == "__main__":
