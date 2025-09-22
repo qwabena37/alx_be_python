@@ -14,13 +14,13 @@ def main():
     match priority:
         case "1":
             task = "Complete Weekly Milestone"
-            priority = 'high'
+            priority = 'high/medium/low'
         case "2":
             task = "Collaborate with other developers"
-            priority = 'medium'
+            priority = 'high/medium/low'
         case "3":
             task = "Go fishing"
-            priority = 'low'
+            priority = 'high/medium/low'
         case _:
             print("Invalid priority. Exiting.")
             return
