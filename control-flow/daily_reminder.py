@@ -7,36 +7,40 @@ def main():
     print("2. Collaborate with other developers")
     print("3. Call a friend")
 
-    choice = input("Enter 1, 2, or 3: ")
+    task = input("Enter your task: ")
+    priority = input("Priority(high/medium/low): ")
+    time_bound = input("Is it time-bound? (yes/no): ")
+   
 
     # Match case to decide task
-    match choice:
+    match task:
         case "1":
             task = "Complete project"
-            urgency = "high"
+            prioriy = "high"
+            time_bound = "yes"
         case "2":
             task = "Collaborate with other developers"
-            urgency = "medium"
+            priority = "medium"
+            time_bound = "no"
         case "3":
             task = "Call a friend"
-            urgency = "low"
+            priority = "low"
+            time_bound = "no"
         case _:
             print("Invalid choice. Exiting.")
             return
 
-    print(f"\nYour task for today: {task} (Urgency: {urgency.upper()})\n")
+    print(f"\nYour task for today: {task} (Urgency: {priority.upper()})\n")
 
     # Loop to remind user based on urgency
     reminders = 0
     while reminders < 3:
-        if urgency == "high":
-            print(f"⚠️ Reminder {reminders+1}: Don't forget to {task} ASAP!")
-        elif urgency == "medium":
-            print(f"🔔 Reminder {reminders+1}: Try to {task} today.")
+        if priority == "high":
+            print(f"⚠️ Reminder {reminders+1}: Finish {task} is a high priority task that requires immediate attention today!")
+        elif priority == "medium":
+            print(f"🔔 Reminder {reminders+1}: Try to {task} .")
         else:
             print(f"😊 Reminder {reminders+1}: Remember to {task} when you can.")
-        
-        reminders += 1
 
 if __name__ == "__main__":
     main()
