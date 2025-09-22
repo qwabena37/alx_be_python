@@ -14,7 +14,7 @@ def main():
     match task:
         case "1":
             task = "Complete Weekly Milestone"
-            priority = "high"
+            priority = 'high'
         case "2":
             task = "Collaborate with other developers"
             priority = 'medium'
