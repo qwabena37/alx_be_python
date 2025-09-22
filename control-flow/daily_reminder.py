@@ -1,51 +1,31 @@
-# priority_task_reminder.py
-import time
+# task_reminder.py
 
 def main():
-    print("=== Priority Task Reminder ===")
-    print("Choose your priority task for today:")
-    print("1. Complete Weekly Milestone")
-    print("2. Collaborate with other developers")
-    print("3. Go fishing")
+    # Prompt for a single task
+    task = input("Enter your task for today: ")
+    priority = input("Set the task's priority (high/medium/low): ").strip().lower()
+    time_bound = input("Is this task time-bound? (yes/no): ").strip().lower()
 
-    task = input("Enter your task: ")
+    print("\n=== Task Reminder ===")
 
-    # Match Case: pick task
+    # Process task based on priority
     match priority:
-        case "1":
-            task = "Complete Weekly Milestone"
-            priority = 'high/medium/low'
-        case "2":
-            task = "Collaborate with other developers"
-            priority = 'high/medium/low'
-        case "3":
-            task = "Go fishing"
-            priority = 'high/medium/low'
+        case "high":
+            reminder = f"⚠️ HIGH PRIORITY: {task}"
+        case "medium":
+            reminder = f"🔔 MEDIUM PRIORITY: {task}"
+        case "low":
+            reminder = f"😊 LOW PRIORITY: {task}"
         case _:
-            print("Invalid priority. Exiting.")
-            return
+            reminder = f"❓ UNKNOWN PRIORITY: {task}"
 
-    # Ask about priority (just for display)
-    priority = input("Priority (high/medium/low): ")
+    # Modify reminder if time-bound
+    if time_bound == "yes":
+        reminder += " — that requires immediate attention today!"
 
-    # Ask about time sensitivity (used in if loop)
-    time_bound = input("Is it time-bound? (yes/no): ")
+    # Provide customized reminder
+    print(reminder)
 
-    print(f"\nYour task for today: {task}")
-    print(f"Priority: {priority.upper()}")
-    print(f"Time-bound: {time_bound.upper()}\n")
-
-    reminders = 0
-    while reminders < 3:
-        if time_bound == "yes":
-            print(f"⏰ Reminder {reminders+1}: {task} MUST be done soon!")
-            time.sleep(2)  # frequent reminders
-        else:
-            print(f"😊 Reminder {reminders+1}: Don't forget to {task} today.")
-            time.sleep(5)  # relaxed reminders
-        reminders += 1
-
-    print("\n✅ All reminders sent. Stay productive!")
 
 if __name__ == "__main__":
     main()
