@@ -13,10 +13,10 @@ def main():
    
 
     # Match case to decide task
-    match task:
+    match priority:
         case "1":
             task = "Complete project"
-            prioriy = "high"
+            priority = "high"
             time_bound = "yes"
         case "2":
             task = "Collaborate with other developers"
