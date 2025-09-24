@@ -18,7 +18,7 @@ if __name__ == "__main__":
     current_date = display_current_datetime()
 
     # Ask user for input
-    days = int(input("Enter number of days to add to the current date: "))
+    days = int(input("Enter the number of days to add to the current date: "))
 
     # Calculate and display future date
     calculate_future_date(current_date, days)
