@@ -13,7 +13,7 @@ class BankAccount:
         if amount <= 0:
             return False
         if amount <= self._account_balance:
-            self._account_balance -= amount
+            self._account_balance -= float(amount)
             return True
         else:
             return False
